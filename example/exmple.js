@@ -1,9 +1,3 @@
-# ulleungdoa
-## discord.js v14 debugging tool
-### made by 태정
-### dokdo에 영감을 받아.
-
-```js
 /**exmple */
 
 /**index.js */
@@ -35,7 +29,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('ulleungdo')
         .setDescription('discord.js v14 debugging tool')
-        .addStringOption(option => option.setName('category').setDescription('type').addChoices({ name: 'cat', value: 'cat' },{ name: 'curl', value: 'curl' },))
+        .addStringOption(option => option.setName('category').setDescription('type').addChoices({ name: 'cat', value: 'cat' },{ name: 'curl', value: 'curl' },{ name: 'js', value: 'js' }))
         .addStringOption(option => option.setName('input').setDescription('args')),
     /**
      * @param {import('discord.js').CommandInteraction} interaction 
@@ -43,8 +37,6 @@ module.exports = {
     async execute(interaction, client) {
         const category = interaction.options.getString('category');
         const args = interaction.options.getString('input');
-
         await ulleungdoHandler.start(interaction, category, args)
     }
 }
-```

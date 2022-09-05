@@ -1,0 +1,28 @@
+{
+  "name": "ulleungdo",
+  "version": "0.2.1",
+  "description": "discord.js v14 debugging tool",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taejung1/ulleungdoa.git"
+  },
+  "keywords": [
+    "discord.js",
+    "debugging"
+  ],
+  "author": "taejung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taejung1/ulleungdoa/issues"
+  },
+  "homepage": "https://github.com/taejung1/ulleungdoa#readme",
+  "dependencies": {
+    "discord.js": "^14.2.0",
+    "node-fetch": "^2.6.1",
+    "util": "^0.12.4"
+  }
+}

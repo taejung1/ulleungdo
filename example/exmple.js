@@ -1,26 +1,21 @@
+/**
+ * ulleungdo 모듈은 현재 3개의 type 를 제공합니다. ["cat","curl","js"]
+ * interaction 받아 모든것을 처리합니다 deferReply() 쓰지마세요.
+*/
+
 /**exmple */
 
 /**index.js */
 const { Client, IntentsBitField, Partials } = require('discord.js');
 const client = new Client({ intents: new IntentsBitField(130815), partials: [Partials.Message, Partials.Channel, Partials.Reaction] })
-const fs = require('fs')
 
 const ulleungdo = require('ulleungdo')
-const ulleungdoHandler = new ulleungdo(client, { owner: ["오너ID"] })
+const ulleungdoHandler = new ulleungdo(client, { owner: ["오너ID"] ,  owners_Message : "당신을 개발자 또는 소유자가 아닙니다."})
+module.exports = ulleungdoHandler
 
-// owner 란 미입력가능 없을시 에플리케이션에서 소유자를찿음.
-// await interaction.deferReply() 기본적으로탑제 interaction.editReply() 응답
-
-client.once('ready', async () => {
-    console.log(`successfully ${client.user.username} bot login success`)
-});
-
-module.exports = ulleungdoHandler;
-client.login('토큰')
+client.login('token')
 
 /** commands/ulleungdo.js */
-
-// 어디까지나 예제임 오류뜨면 태정
 
 const { SlashCommandBuilder } = require('discord.js');
 const ulleungdoHandler = require('../index.js')

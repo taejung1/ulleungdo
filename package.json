@@ -1,6 +1,6 @@
 {
   "name": "ulleungdo",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "description": "discord.js v14 debugging tool",
   "main": "src/index.js",
   "scripts": {
